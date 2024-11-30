@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .wrapper {
+            background-color: #F5EFFF;
+            min-height: 100vh;
+        }
+        .table{
+            --bs-table-bg:transparent;
+        }
+    </style>
+    <title>Not To do list</title>
+</head>
+
+<body>
+    <div class="wrapper pt-5">
+        <!-- title -->
+        <div class="container">
+            <h1 class="text-center ">Not To Do List</h1>
+
+            <!-- form -->
+            <form action="javascript:void(0)" onsubmit= "handleOnsubmit(this)" class="border border-black p-5 rounded mt-3 shadow">
+                <div class="row g-3">
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" placeholder="Add new task" aria-label="First name"
+                            name="task">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="number" class="form-control" placeholder="hours" aria-label="Last name" min="1" name="hour">
+                    </div>
+                    <div class="col-md-3 d-grid">
+                        <button class="btn btn-primary">Add new task</button>
+                    </div>
+                </div>
+            </form>
+            <!-- tables -->
+            <div class="row mt-5">
+                <!-- entry list table -->
+                <div class="col-md-6">
+                    <h3 class="text-center">Entry List</h3>
+                    <hr>
+                    <table class="table border border-black table-hover ">
+                        <tbody id="entryList">
+                        </tbody>
+                    </table>
+                </div>
+                <!-- bad list table -->
+                <div class="col-md-6">
+                    <h3 class="text-center">Bad List</h3>
+                    <hr>
+                    <table class="table border border-black table-hover ">
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td class="text-end">
+                                    <button class="btn btn-warning"><i class="fa-solid fa-arrow-left"></i></button>
+                                    <button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="alert alert-success">You could have success = 50hr</div>
+                </div>
+                <div class="col-md"></div>
+            </div>
+            <div class="alert alert-success">The total hours allocated = 30hr</div>
+        </div>
+    </div>
+    <script src="./sript.js"></script>
+</body>
+
+</html
